@@ -1,0 +1,15 @@
+[Unit]
+Description=Reddit Monolith Application
+After=mongod.service network.target
+Requires= mongod.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/puma
+ExecStop=/bin/kill -15 $MAINPID
+WorkingDirectory=/home/appuser/reddit
+User=appuser
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
