@@ -4,6 +4,7 @@ variable public_key_path {
 
 variable private_key_path {
   description = "Path to the private key used to connect to instance"
+  default     = "~/.ssh/appuser"
 }
 
 variable zone {
