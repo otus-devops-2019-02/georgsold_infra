@@ -1,9 +1,8 @@
 project = "infra-123456"
 public_key_path = "~/.ssh/appuser.pub"
 private_key_path = "~/.ssh/appuser"
-disk_image = "reddit-base"
 app_disk_image = "reddit-app-base"
 db_disk_image = "reddit-db-base"
 zone = "europe-west1-b"
 region = "europe-west1"
-count = 1
+

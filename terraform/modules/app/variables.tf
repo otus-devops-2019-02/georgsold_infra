@@ -20,3 +20,4 @@ variable app_disk_image {
 variable "mngdb_ip" {
   description = "MongoDB Instance IP"
 }
+
