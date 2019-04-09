@@ -16,6 +16,15 @@ variable zone {
   default = "europe-west1-b"
 }
 
+variable disk_image {
+  description = "Disk image"
+}
+
+variable count {
+  description = "count instances"
+  default     = "1"
+}
+
 variable public_key_path {
   # Описание переменной
   description = "Path to the public key used for ssh access"

@@ -7,6 +7,11 @@ variable private_key_path {
   default     = "~/.ssh/appuser"
 }
 
+variable count {
+  description = "Node count"
+  default     = "1"
+}
+
 variable zone {
   description = "Zone"
   default     = "europe-west1-b"
@@ -20,4 +25,3 @@ variable app_disk_image {
 variable "mngdb_ip" {
   description = "MongoDB Instance IP"
 }
-
