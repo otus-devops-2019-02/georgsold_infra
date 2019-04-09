@@ -3,6 +3,7 @@ public_key_path = "~/.ssh/appuser.pub"
 private_key_path = "~/.ssh/appuser"
 app_disk_image = "reddit-app-base"
 db_disk_image = "reddit-db-base"
+disk_image = "reddit-base"
 zone = "europe-west1-b"
 region = "europe-west1"
 
