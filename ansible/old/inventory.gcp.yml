@@ -1,8 +1,8 @@
 plugin: gcp_compute
 projects:
-  - infra-666666
+  - infra-235014
 auth_kind: serviceaccount
-service_account_file: ~/Downloads/infra-666666-123123aaa123.json
+service_account_file: ~/Downloads/infra-235014-277f231aa152.json
 filters:
 hostnames:
   - name

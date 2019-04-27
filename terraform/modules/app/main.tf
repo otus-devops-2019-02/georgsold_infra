@@ -2,13 +2,13 @@ resource "google_compute_address" "app_ip" {
   name = "reddit-app-ip"
 }
 
-data "template_file" "mngdb" {
-  template = "${file("${path.module}/files/puma.service")}"
+# data "template_file" "mngdb" {
+#   template = "${file("${path.module}/files/puma.service")}"
 
-  vars = {
-    mngdb_ip = "${var.mngdb_ip}"
-  }
-}
+#   vars = {
+#     mngdb_ip = "${var.mngdb_ip}"
+#   }
+# }
 
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
@@ -42,14 +42,14 @@ resource "google_compute_instance" "app" {
     private_key = "${file(var.private_key_path)}"
   }
 
-  provisioner "file" {
-    content     = "${data.template_file.mngdb.rendered}"
-    destination = "/tmp/puma.service"
-  }
+  # provisioner "file" {
+  #   content     = "${data.template_file.mngdb.rendered}"
+  #   destination = "/tmp/puma.service"
+  # }
 
-  provisioner "remote-exec" {
-    script = "${path.module}/files/deploy.sh"
-  }
+  # provisioner "remote-exec" {
+  #   script = "${path.module}/files/deploy.sh"
+  # }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
