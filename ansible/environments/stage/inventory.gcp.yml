@@ -1,0 +1,14 @@
+plugin: gcp_compute
+projects:
+  - infra-235014
+auth_kind: serviceaccount
+service_account_file: ~/Downloads/infra-235014-277f231aa152.json
+filters:
+hostnames:
+  - name
+groups:
+  app: "'reddit-app' in name"
+  db: "'reddit-db' in name"
+compose:
+  ansible_host: networkInterfaces[0].accessConfigs[0].natIP
+  reddit_int_ip: networkInterfaces[0].networkIP
